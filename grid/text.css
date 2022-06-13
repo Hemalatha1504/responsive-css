@@ -1,0 +1,70 @@
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "nav nav nav nav"
+                          "main main main sidebar"
+                          "content1 content2 content3 sidebar"
+                          "footer footer footer footer";
+    grid-template-columns:1fr 1fr 1fr 1fr ;
+    grid-template-rows: 0.5fr 1fr 1.5fr 2fr;
+    text-align:justify;
+    font-size: medium;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+nav{
+    background-color: rgb(241, 117, 117);
+    grid-area: nav;
+    border-radius: 7px;
+    padding: 7px;
+}
+main{
+    background-color: rgb(174, 240, 174);
+    grid-area: main;
+    border-radius: 7px;
+    padding: 7px;
+}
+#sidebar{
+    background-color: rgb(171, 171, 207);
+    grid-area: sidebar;
+    border-radius: 7px;
+    padding: 7px;
+    overflow: scroll;
+}
+#content1{
+    background-color: rgb(197, 155, 197);
+    grid-area: content1;
+    border-radius: 7px;
+    padding: 7px;
+}
+#content2{
+    background-color: rgb(194, 87, 137);
+    grid-area: content2;
+    border-radius: 7px;
+    padding: 7px;
+}
+#content3{
+    background-color: rgb(169, 233, 233);
+    grid-area: content3;
+    border-radius: 7px;
+    padding: 7px;
+}
+footer{
+    background-color: rgb(77, 75, 75);
+    grid-area: footer;
+    border-radius: 7px;
+    padding: 7px;
+}
+@media only screen and (max-width:550px){
+    .grid-container{
+        grid-template-areas: "nav "
+        "sidebar"
+        "main"
+        "content1" 
+        "content2" 
+        "content3" 
+        "footer";
+grid-template-columns:1fr;
+grid-template-rows: 0.5fr 2fr 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr ;
+    }
+}
